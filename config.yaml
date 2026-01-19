@@ -1,0 +1,17 @@
+name: Braiins Manager Agent
+version: "1.0.0"
+slug: braiins_agent
+description: Runs the Braiins OS Manager Agent for remote mining management
+url: "https://github.com/STIRA87/ha-braiins-agent-addon/tree/main/braiins-agent"
+arch:
+  - aarch64
+startup: application
+boot: auto
+init: false
+host_network: true
+devices:
+  - /dev/null:/dev/null
+ports:
+  22/tcp: 2222
+ports_description:
+  22/tcp: SSH port for installation and configuration
