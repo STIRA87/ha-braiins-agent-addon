@@ -11,7 +11,7 @@ RUN wget https://downloads.braiins.com/braiins-manager-agent/assets/4.5.2/braiin
 
 # Preseed debconf with dummy values for non-interactive install
 RUN echo "braiins-manager-agent braiins-manager-agent/agent-id string 123e4567-e89b-42d3-a456-426655440000" | debconf-set-selections
-RUN echo "braiins-manager-agent braiins-manager-agent/secret-key password dummy" | debconf-set-selections
+RUN echo "braiins-manager-agent braiins-manager-agent/secret-key password 123e4567-e89b-42d3-a456-426655440001" | debconf-set-selections
 
 # Install the agent non-interactively
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y /braiins-manager-agent.deb
