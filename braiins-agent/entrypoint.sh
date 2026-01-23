@@ -8,6 +8,12 @@ SECRET_KEY=$(jq -r '.secret_key // empty' /data/options.json)
 # Set root password (defaults to original if not provided)
 echo "root:$ROOT_PASSWORD" | chpasswd
 
+# Create directory and empty file if missing
+mkdir -p /etc/braiins-manager-agent
+if [ ! -f /etc/braiins-manager-agent/daemon.yml ]; then
+  touch /etc/braiins-manager-agent/daemon.yml
+fi
+
 # Update agent config if ID and key are provided (assumes top-level YAML keys in daemon.yml)
 if [ -n "$AGENT_ID" ] && [ -n "$SECRET_KEY" ]; then
     yq e -i ".agent_id = \"$AGENT_ID\"" /etc/braiins-manager-agent/daemon.yml
