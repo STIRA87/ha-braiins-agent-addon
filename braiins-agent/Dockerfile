@@ -10,7 +10,7 @@ RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_arm64
 RUN wget https://downloads.braiins.com/braiins-manager-agent/assets/4.5.2/braiins-manager-agent-linux-aarch64.deb -O /braiins-manager-agent.deb
 
 # Preseed debconf with dummy values for non-interactive install
-RUN echo "braiins-manager-agent braiins-manager-agent/agent-id string 00000000-0000-0000-0000-000000000000" | debconf-set-selections
+RUN echo "braiins-manager-agent braiins-manager-agent/agent-id string 123e4567-e89b-42d3-a456-426655440000" | debconf-set-selections
 RUN echo "braiins-manager-agent braiins-manager-agent/secret-key password dummy" | debconf-set-selections
 
 # Install the agent non-interactively
