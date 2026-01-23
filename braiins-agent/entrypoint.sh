@@ -21,7 +21,7 @@ if [ -n "$AGENT_ID" ] && [ -n "$SECRET_KEY" ]; then
 fi
 
 # Start the agent in background (adjust path/args if needed; assumes binary is in PATH and uses default config)
-nohup braiins-manager-agent > /var/log/braiins-agent.log 2>&1 &
+nohup /usr/bin/bma-daemon --config /etc/braiins-manager-agent/daemon.yml > /var/log/braiins-agent.log 2>&1 &
 
 # Start SSH server
 exec /usr/sbin/sshd -D
