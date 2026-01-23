@@ -16,7 +16,7 @@ ports:
 ports_description:
   22/tcp: SSH port for installation and configuration
 options:
-  root_password: "mJpMpBdjbxRnGuh4FcbD"
+  root_password: "root"
   agent_id: ""
   secret_key: ""
 schema:
