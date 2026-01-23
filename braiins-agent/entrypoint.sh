@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Parse options from HA add-on config (/data/options.json)
-ROOT_PASSWORD=$(jq -r '.root_password // "mJpMpBdjbxRnGuh4FcbD"' /data/options.json)
+ROOT_PASSWORD=$(jq -r '.root_password // "root"' /data/options.json)
 AGENT_ID=$(jq -r '.agent_id // empty' /data/options.json)
 SECRET_KEY=$(jq -r '.secret_key // empty' /data/options.json)
 
