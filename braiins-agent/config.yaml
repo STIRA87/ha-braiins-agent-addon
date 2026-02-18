@@ -2,7 +2,7 @@ name: Braiins Manager Agent
 version: "1.0.0"
 slug: braiins_agent
 description: Runs the Braiins OS Manager Agent for remote mining management
-url: "https://github.com/STIRA87/ha-braiins-agent-addon/braiins-agent"
+url: "https://github.com/STIRA87/ha-braiins-agent-addon"
 arch:
   - aarch64
 startup: application
@@ -19,6 +19,7 @@ options:
   root_password: "root"
   agent_id: ""
   secret_key: ""
+  agent_version: "4.6.0"
 schema:
   root_password: password?
   agent_id: str?
