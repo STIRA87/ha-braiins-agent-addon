@@ -19,7 +19,9 @@ options:
   root_password: "root"
   agent_id: ""
   secret_key: ""
+  agent_version: "4.5.2"
 schema:
   root_password: password?
   agent_id: str?
   secret_key: password?
+  agent_version: str?
